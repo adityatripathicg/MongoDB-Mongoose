@@ -61,16 +61,29 @@ const Employee = mongoose.model("Employee", userSchema);
 // .catch((err)=>console.log(err));
 
 //Update in Mongoose
-//UpdateOne
-User.updateOne({name : "CG"}, {age:21}).then(res => console.log(res))
-.catch(err=>console.log(err));
-//updateMany
-User.updateOne({age : {$gt:50}}, {age:21}).then(res => console.log(res))
-.catch(err=>console.log(err));
-//findoneandupdate
-User.findOneAndUpdate({name : "CG"}, {age:35},{new:true}).then(res => console.log(res))
-.catch(err=>console.log(err));
-//findByIdAndUpdate
-User.findByIdAndUpdate({_id:"65a4e28050edf96bff392aa3"}, {age:20},{new:true}).then(res => console.log(res))
-.catch(err=>console.log(err));
+// //UpdateOne
+// User.updateOne({name : "CG"}, {age:21}).then(res => console.log(res))
+// .catch(err=>console.log(err));
+// //updateMany
+// User.updateOne({age : {$gt:50}}, {age:21}).then(res => console.log(res))
+// .catch(err=>console.log(err));
+// //findoneandupdate
+// User.findOneAndUpdate({name : "CG"}, {age:35},{new:true}).then(res => console.log(res))
+// .catch(err=>console.log(err));
+// //findByIdAndUpdate
+// User.findByIdAndUpdate({_id:"65a4e28050edf96bff392aa3"}, {age:20},{new:true}).then(res => console.log(res))
+// .catch(err=>console.log(err));
 
+//DELETE in Mongoose
+//deleteOne
+// User.deleteOne({name : "Bruce"}).then((res)=>{console.log(res)})
+// .catch((err)=>{console.log(err)});
+//deleteMany
+// User.deleteMany({age :{$gt :40}}).then((res)=>{console.log(res)})
+// .catch((err)=>{console.log(err)});
+//findByIdAndDelete
+User.findByIdAndDelete({_id:"65a4e28050edf96bff392aa3"}).then((res)=>{console.log(res)})
+.catch((err)=>{console.log(err)});
+//Model.findOneAndDelete
+User.findOneAndDelete({name : "Tony"}).then((res)=>{console.log(res)})
+.catch((err)=>{console.log(err)});
