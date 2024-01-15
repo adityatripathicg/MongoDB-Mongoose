@@ -38,8 +38,24 @@ const Employee = mongoose.model("Employee", userSchema);
 // .catch((err)=>console.log(err));
 
 //Inserting Multiple Documents using Mongoose
-User.insertMany([
-    {name:"Tony",email:"tony@gmail.com", age : 69},
-    {name:"Peter",email:"peter@gmail.com", age : 39},
-    {name:"Bruce",email:"Bruce@gmail.com", age : 29},
-]).then((res)=>console.log(res));
+// User.insertMany([
+//     {name:"Tony",email:"tony@gmail.com", age : 69},
+//     {name:"Peter",email:"peter@gmail.com", age : 39},
+//     {name:"Bruce",email:"Bruce@gmail.com", age : 29},
+// ]).then((res)=>console.log(res));
+
+//Find in Mongoose
+// User.find({}).then((res)=>console.log(res))
+// .catch((err)=>console.log(err));
+
+//find with condition age greater then 47
+// User.find({ age: {$gt: 47}}).then((res)=>console.log(res[0].name))
+// .catch((err)=>console.log(err));
+
+//Find in Mongoose
+// User.findOne({ age: {$gt: 47}}).then((res)=>console.log(res))
+// .catch((err)=>console.log(err));
+
+//Find by ID
+User.findById("65a4e28050edf96bff392aa2").then((res)=>console.log(res))
+.catch((err)=>console.log(err));
