@@ -82,8 +82,9 @@ const Employee = mongoose.model("Employee", userSchema);
 // User.deleteMany({age :{$gt :40}}).then((res)=>{console.log(res)})
 // .catch((err)=>{console.log(err)});
 //findByIdAndDelete
-User.findByIdAndDelete({_id:"65a4e28050edf96bff392aa3"}).then((res)=>{console.log(res)})
-.catch((err)=>{console.log(err)});
-//Model.findOneAndDelete
-User.findOneAndDelete({name : "Tony"}).then((res)=>{console.log(res)})
-.catch((err)=>{console.log(err)});
+// User.findByIdAndDelete({_id:"65a4e28050edf96bff392aa3"}).then((res)=>{console.log(res)})
+// .catch((err)=>{console.log(err)});
+// //Model.findOneAndDelete
+// User.findOneAndDelete({name : "Tony"}).then((res)=>{console.log(res)})
+// .catch((err)=>{console.log(err)});
+
