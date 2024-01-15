@@ -57,5 +57,20 @@ const Employee = mongoose.model("Employee", userSchema);
 // .catch((err)=>console.log(err));
 
 //Find by ID
-User.findById("65a4e28050edf96bff392aa2").then((res)=>console.log(res))
-.catch((err)=>console.log(err));
+// User.findById("65a4e28050edf96bff392aa2").then((res)=>console.log(res))
+// .catch((err)=>console.log(err));
+
+//Update in Mongoose
+//UpdateOne
+User.updateOne({name : "CG"}, {age:21}).then(res => console.log(res))
+.catch(err=>console.log(err));
+//updateMany
+User.updateOne({age : {$gt:50}}, {age:21}).then(res => console.log(res))
+.catch(err=>console.log(err));
+//findoneandupdate
+User.findOneAndUpdate({name : "CG"}, {age:35},{new:true}).then(res => console.log(res))
+.catch(err=>console.log(err));
+//findByIdAndUpdate
+User.findByIdAndUpdate({_id:"65a4e28050edf96bff392aa3"}, {age:20},{new:true}).then(res => console.log(res))
+.catch(err=>console.log(err));
+
